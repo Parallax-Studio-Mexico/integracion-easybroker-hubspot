@@ -101,10 +101,11 @@ class easybrokerController extends Controller
             /*
             *   dd($clientes);
             */
+            $sendToHubspot = $this->sendHubspot($clientes);
             return false;
             
             //Envio la data a HS
-            $sendToHubspot = $this->sendHubspot($clientes);
+            //$sendToHubspot = $this->sendHubspot($clientes);
         }
     }
 
@@ -123,5 +124,12 @@ class easybrokerController extends Controller
     //Funcion para enviar la data de los clientes a Hubspot
     public function sendHubspot($clientes)
     {
+        /*
+        *   dd($clientes[0]);
+        */
+        
+        foreach($clientes as $itemClients){
+            
+        }
     }
 }
